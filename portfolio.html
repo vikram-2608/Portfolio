@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kumar Vikramaditya — Portfolio</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <meta name="description" content="Portfolio of Kumar Vikramaditya — Web Developer / Designer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#2dd4bf;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+      --gap:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,var(--bg),#071126 120%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.7);
+      padding:32px;
+      backdrop-filter: blur(6px);
+    }
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;
+    }
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{
+      width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#7dd3fc);
+      display:flex;align-items:center;justify-content:center;font-weight:800;color:#032; font-size:22px;
+      box-shadow:0 6px 18px rgba(45,212,191,0.08);
+    }
+    .name h1{margin:0;font-size:20px}
+    .name p{margin:0;color:var(--muted);font-size:13px}
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:var(--gap)}
+
+    /* left column */
+    .hero{background:var(--card);padding:24px;border-radius:16px}
+    .hero h2{margin:0 0 8px 0;font-size:26px}
+    .hero p{margin:0 0 16px 0;color:var(--muted);line-height:1.5}
+    .cta{display:flex;gap:12px;margin-top:12px}
+    .btn{background:var(--accent);color:#04323a;border:none;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .section{margin-top:18px;background:var(--glass);padding:18px;border-radius:12px}
+    .section h3{margin:0 0 12px 0}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px}
+    .project h4{margin:0 0 6px 0}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{flex:1 1 45%;min-width:150px}
+    .bar{height:10px;background:rgba(255,255,255,0.05);border-radius:8px;overflow:hidden}
+    .bar > span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#7dd3fc)}
+
+    /* right column */
+    .sidebar{position:sticky;top:32px}
+    .card{background:var(--card);padding:18px;border-radius:12px}
+    .contact p{color:var(--muted);margin:8px 0}
+    .socials{display:flex;gap:8px;margin-top:8px}
+    .chip{padding:8px 10px;border-radius:10px;background:rgba(255,255,255,0.03);font-weight:600}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:1000px){main{grid-template-columns:1fr}} 
+    @media (max-width:520px){.projects{grid-template-columns:1fr}.avatar{width:62px;height:62px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">KV</div>
+        <div class="name">
+          <h1>Kumar Vikramaditya</h1>
+          <p>Full‑Stack Web Developer · UI/UX Enthusiast</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- left column -->
+      <div>
+        <section class="hero">
+          <h2>Hi — I'm Kumar.</h2>
+          <p>I build responsive web applications and delightful user interfaces. I enjoy turning complex problems into simple, beautiful and intuitive designs. Currently focused on building accessible, performance-minded frontends with clean engineering.
+          </p>
+          <div class="cta">
+            <a class="btn" href="#contact">Hire Me</a>
+            <a class="btn secondary" href="#projects">View Work</a>
+          </div>
+        </section>
+
+        <section id="about" class="section">
+          <h3>About Me</h3>
+          <p style="color:var(--muted)">Hello — I'm <strong>Kumar Vikramaditya</strong>. I create modern web experiences using HTML, CSS and JavaScript. I care about accessibility, performance and readable code. Outside of coding I like sketching interfaces and learning new front-end patterns.</p>
+
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+            <div class="chip">Location: India</div>
+            <div class="chip">Availability: Open to work</div>
+            <div class="chip">Languages: English, Hindi</div>
+          </div>
+        </section>
+
+        <section id="projects" class="section">
+          <h3>Selected Projects</h3>
+          <div class="projects">
+            <article class="project">
+              <h4>Gamics — Match Manager</h4>
+              <p>Match scheduling web app with responsive UI, real-time match status and admin dashboard. Built with HTML, CSS and vanilla JS.</p>
+            </article>
+            <article class="project">
+              <h4>Supply Chain Dashboard</h4>
+              <p>Interactive dashboard to visualize shipments, KPIs and alerts. Focus on charts and quick filtering UX.</p>
+            </article>
+            <article class="project">
+              <h4>Portfolio Template</h4>
+              <p>Lightweight single-page portfolio template that's easy to reuse and customize. Ready-to-deploy.</p>
+            </article>
+            <article class="project">
+              <h4>UI Components Library</h4>
+              <p>Reusable components (cards, modals, tooltips) with accessible patterns and keyboard interactions.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="skills" class="section">
+          <h3>Skills</h3>
+          <div class="skills">
+            <div class="skill">
+              <div style="display:flex;justify-content:space-between"><strong>HTML &amp; CSS</strong><span style="color:var(--muted)">95%</span></div>
+              <div class="bar" aria-hidden="true"><span style="width:95%"></span></div>
+            </div>
+            <div class="skill">
+              <div style="display:flex;justify-content:space-between"><strong>JavaScript</strong><span style="color:var(--muted)">85%</span></div>
+              <div class="bar" aria-hidden="true"><span style="width:85%"></span></div>
+            </div>
+            <div class="skill">
+              <div style="display:flex;justify-content:space-between"><strong>Responsive Design</strong><span style="color:var(--muted)">90%</span></div>
+              <div class="bar" aria-hidden="true"><span style="width:90%"></span></div>
+            </div>
+            <div class="skill">
+              <div style="display:flex;justify-content:space-between"><strong>Accessibility</strong><span style="color:var(--muted)">75%</span></div>
+              <div class="bar" aria-hidden="true"><span style="width:75%"></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="section">
+          <h3>Education &amp; Experience</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li><strong>B.Tech — Computer Science</strong> — University (Year)</li>
+            <li><strong>Web Developer</strong> — Freelance &amp; small teams (Projects)</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- right column -->
+      <aside class="sidebar">
+        <div class="card contact">
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:kumar.vikramaditya@example.com" style="color:var(--accent);text-decoration:none">kumar.vikramaditya@example.com</a></p>
+          <p>Phone: +91 90000 00000</p>
+          <div class="socials">
+            <a class="chip" href="#">GitHub</a>
+            <a class="chip" href="#">LinkedIn</a>
+            <a class="chip" href="#">Dribbble</a>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="card">
+          <h3>Quick Info</h3>
+          <p style="color:var(--muted)">Preferred stack: HTML, CSS, JavaScript<br>Tools: VSCode, Git, Chrome DevTools</p>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <a class="btn" href="#">Download CV</a>
+            <a class="btn secondary" href="#contact">Let's Talk</a>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="card">
+          <h3>Availability</h3>
+          <p style="color:var(--muted)">Open for full-time or freelance work. Based in India — remote friendly.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Kumar Vikramaditya — Built with ❤️ using HTML &amp; CSS</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
